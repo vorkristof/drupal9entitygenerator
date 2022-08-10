@@ -39,7 +39,7 @@ foreach ($data as $line) {
 	if (count($var) > 1) {
 		$output .= "\t\$fields['" . $var[0] . "'] = BaseFieldDefinition::create('" . $var[1] . "')\n";
 		$output .= "\t\t->setLabel('" . $var[0] . "')\n";
-		$output .= "\t\t->setDescription(t('The " . ucfirst($var[0]) . " of the " . $title . " entity.'))\n";
+		$output .= "\t\t->setDescription(t('The " . str_replace('_', ' ', ucfirst($var[0])) . " of the " . $title . " entity.'))\n";
 		$output .= "\t\t->setReadOnly(TRUE);\n\n";
 	}
 }
@@ -51,8 +51,13 @@ foreach ($data as $line) {
 	$var[1] = trim(preg_replace('/\s\s+/', '', $var[1]));
 	
 	if (count($var) > 1) {
+		$name = explode('_', $var[0]);
+		$functionName = "";
+		foreach ($name as $n) {	
+			$functionName .= ucfirst($n);
+		}
 		$output .= "/**\n *{@inheritdoc}\n */\n";
-		$output .= "public function get" . ucfirst($var[0]) . "() {\n";
+		$output .= "public function get" . $functionName . "() {\n";
 		$output .= "\treturn \$this->" . $var[0] . ";\n";
 		$output .= "}\n\n";
 	}

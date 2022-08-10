@@ -1,0 +1,555 @@
+/**
+ *  The sample sid.
+ * 
+ *  @var integer
+ */
+protected $sid;
+
+/**
+ *  The sample cid.
+ * 
+ *  @var integer
+ */
+protected $cid;
+
+/**
+ *  The sample date.
+ * 
+ *  @var integer
+ */
+protected $date;
+
+/**
+ *  The sample transfusion_date.
+ * 
+ *  @var integer
+ */
+protected $transfusion_date;
+
+/**
+ *  The sample feed_parential.
+ * 
+ *  @var integer
+ */
+protected $feed_parential;
+
+/**
+ *  The sample feed_milk.
+ * 
+ *  @var integer
+ */
+protected $feed_milk;
+
+/**
+ *  The sample feed_nutrition.
+ * 
+ *  @var integer
+ */
+protected $feed_nutrition;
+
+/**
+ *  The sample barcode.
+ * 
+ *  @var string
+ */
+protected $barcode;
+
+/**
+ *  The sample eid.
+ * 
+ *  @var integer
+ */
+protected $eid;
+
+/**
+ *  The sample text_id.
+ * 
+ *  @var string
+ */
+protected $text_id;
+
+/**
+ *  The sample status.
+ * 
+ *  @var integer
+ */
+protected $status;
+
+/**
+ *  The sample result.
+ * 
+ *  @var integer
+ */
+protected $result;
+
+/**
+ *  The sample result_msms.
+ * 
+ *  @var integer
+ */
+protected $result_msms;
+
+/**
+ *  The sample result_date.
+ * 
+ *  @var integer
+ */
+protected $result_date;
+
+/**
+ *  The sample remarks.
+ * 
+ *  @var string
+ */
+protected $remarks;
+
+/**
+ *  The sample iid.
+ * 
+ *  @var integer
+ */
+protected $iid;
+
+/**
+ *  The sample sender_code.
+ * 
+ *  @var string
+ */
+protected $sender_code;
+
+/**
+ *  The sample register_nr.
+ * 
+ *  @var string
+ */
+protected $register_nr;
+
+/**
+ *  The sample dr_spot_nr.
+ * 
+ *  @var string
+ */
+protected $dr_spot_nr;
+
+/**
+ *  The sample result_msms_date.
+ * 
+ *  @var integer
+ */
+protected $result_msms_date;
+
+/**
+ *  The sample sender_place.
+ * 
+ *  @var string
+ */
+protected $sender_place;
+
+/**
+ *  The sample dr_name.
+ * 
+ *  @var string
+ */
+protected $dr_name;
+
+/**
+ *  The sample sample_num.
+ * 
+ *  @var integer
+ */
+protected $sample_num;
+
+/**
+ *  The sample type.
+ * 
+ *  @var string
+ */
+protected $type;
+
+/**
+ *  The sample patient_type.
+ * 
+ *  @var integer
+ */
+protected $patient_type;
+
+/**
+ *  The sample action.
+ * 
+ *  @var string
+ */
+protected $action;
+
+/**
+ *  The sample action_msms.
+ * 
+ *  @var string
+ */
+protected $action_msms;
+
+/**
+ *  The sample badat.
+ * 
+ *  @var string
+ */
+protected $badat;
+
+/**
+ *  The sample journal_order.
+ * 
+ *  @var integer
+ */
+protected $journal_order;
+
+public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
+	$fields['sid'] = BaseFieldDefinition::create('integer')
+		->setLabel('sid')
+		->setDescription(t('The Sid of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['cid'] = BaseFieldDefinition::create('integer')
+		->setLabel('cid')
+		->setDescription(t('The Cid of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['date'] = BaseFieldDefinition::create('integer')
+		->setLabel('date')
+		->setDescription(t('The Date of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['transfusion_date'] = BaseFieldDefinition::create('integer')
+		->setLabel('transfusion_date')
+		->setDescription(t('The Transfusion date of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['feed_parential'] = BaseFieldDefinition::create('integer')
+		->setLabel('feed_parential')
+		->setDescription(t('The Feed parential of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['feed_milk'] = BaseFieldDefinition::create('integer')
+		->setLabel('feed_milk')
+		->setDescription(t('The Feed milk of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['feed_nutrition'] = BaseFieldDefinition::create('integer')
+		->setLabel('feed_nutrition')
+		->setDescription(t('The Feed nutrition of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['barcode'] = BaseFieldDefinition::create('string')
+		->setLabel('barcode')
+		->setDescription(t('The Barcode of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['eid'] = BaseFieldDefinition::create('integer')
+		->setLabel('eid')
+		->setDescription(t('The Eid of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['text_id'] = BaseFieldDefinition::create('string')
+		->setLabel('text_id')
+		->setDescription(t('The Text id of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['status'] = BaseFieldDefinition::create('integer')
+		->setLabel('status')
+		->setDescription(t('The Status of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['result'] = BaseFieldDefinition::create('integer')
+		->setLabel('result')
+		->setDescription(t('The Result of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['result_msms'] = BaseFieldDefinition::create('integer')
+		->setLabel('result_msms')
+		->setDescription(t('The Result msms of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['result_date'] = BaseFieldDefinition::create('integer')
+		->setLabel('result_date')
+		->setDescription(t('The Result date of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['remarks'] = BaseFieldDefinition::create('string')
+		->setLabel('remarks')
+		->setDescription(t('The Remarks of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['iid'] = BaseFieldDefinition::create('integer')
+		->setLabel('iid')
+		->setDescription(t('The Iid of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['sender_code'] = BaseFieldDefinition::create('string')
+		->setLabel('sender_code')
+		->setDescription(t('The Sender code of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['register_nr'] = BaseFieldDefinition::create('string')
+		->setLabel('register_nr')
+		->setDescription(t('The Register nr of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['dr_spot_nr'] = BaseFieldDefinition::create('string')
+		->setLabel('dr_spot_nr')
+		->setDescription(t('The Dr spot nr of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['result_msms_date'] = BaseFieldDefinition::create('integer')
+		->setLabel('result_msms_date')
+		->setDescription(t('The Result msms date of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['sender_place'] = BaseFieldDefinition::create('string')
+		->setLabel('sender_place')
+		->setDescription(t('The Sender place of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['dr_name'] = BaseFieldDefinition::create('string')
+		->setLabel('dr_name')
+		->setDescription(t('The Dr name of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['sample_num'] = BaseFieldDefinition::create('integer')
+		->setLabel('sample_num')
+		->setDescription(t('The Sample num of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['type'] = BaseFieldDefinition::create('string')
+		->setLabel('type')
+		->setDescription(t('The Type of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['patient_type'] = BaseFieldDefinition::create('integer')
+		->setLabel('patient_type')
+		->setDescription(t('The Patient type of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['action'] = BaseFieldDefinition::create('string')
+		->setLabel('action')
+		->setDescription(t('The Action of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['action_msms'] = BaseFieldDefinition::create('string')
+		->setLabel('action_msms')
+		->setDescription(t('The Action msms of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['badat'] = BaseFieldDefinition::create('string')
+		->setLabel('badat')
+		->setDescription(t('The Badat of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	$fields['journal_order'] = BaseFieldDefinition::create('integer')
+		->setLabel('journal_order')
+		->setDescription(t('The Journal order of the sample entity.'))
+		->setReadOnly(TRUE);
+
+	return $fields;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getSid() {
+	return $this->sid;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getCid() {
+	return $this->cid;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getDate() {
+	return $this->date;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getTransfusionDate() {
+	return $this->transfusion_date;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getFeedParential() {
+	return $this->feed_parential;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getFeedMilk() {
+	return $this->feed_milk;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getFeedNutrition() {
+	return $this->feed_nutrition;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getBarcode() {
+	return $this->barcode;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getEid() {
+	return $this->eid;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getTextId() {
+	return $this->text_id;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getStatus() {
+	return $this->status;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getResult() {
+	return $this->result;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getResultMsms() {
+	return $this->result_msms;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getResultDate() {
+	return $this->result_date;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getRemarks() {
+	return $this->remarks;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getIid() {
+	return $this->iid;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getSenderCode() {
+	return $this->sender_code;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getRegisterNr() {
+	return $this->register_nr;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getDrSpotNr() {
+	return $this->dr_spot_nr;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getResultMsmsDate() {
+	return $this->result_msms_date;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getSenderPlace() {
+	return $this->sender_place;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getDrName() {
+	return $this->dr_name;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getSampleNum() {
+	return $this->sample_num;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getType() {
+	return $this->type;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getPatientType() {
+	return $this->patient_type;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getAction() {
+	return $this->action;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getActionMsms() {
+	return $this->action_msms;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getBadat() {
+	return $this->badat;
+}
+
+/**
+ *{@inheritdoc}
+ */
+public function getJournalOrder() {
+	return $this->journal_order;
+}
+
